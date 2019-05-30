@@ -8,4 +8,8 @@ class ApplicationController < Sinatra::Base
     erb :create
   end
 
+  post '/recipes' do
+    @recipe = Recipe.new(params)
+  end
+
 end
